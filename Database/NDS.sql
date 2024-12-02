@@ -5,41 +5,42 @@ GO
 
 CREATE TABLE STATE (
     StateSK INT IDENTITY(1,1) PRIMARY KEY,
-    StateID CHAR(2) NOT NULL,
-    StateCode CHAR(2) NOT NULL,
-    StateName VARCHAR(255) NOT NULL,
+    StateID CHAR(2),
+    StateCode CHAR(2),
+    StateName VARCHAR(255),
     CreatedTime DATETIME NOT NULL DEFAULT GETDATE(),
-    UpdatedTime DATETIME NULL,
-    SourceID INT NOT NULL
+    UpdatedTime DATETIME,
+    SourceID INT
 );
 
 CREATE TABLE COUNTY (
     CountySK INT IDENTITY(1,1) PRIMARY KEY,
-    CountyCode CHAR(5) NOT NULL,
-    CountyName VARCHAR(255) NOT NULL,
+    CountyCode CHAR(5),
+    CountyName VARCHAR(255),
     CountyNameAscii VARCHAR(255),
     CountyFull VARCHAR(255),
     CountyFips CHAR(5),
-    Latitud DECIMAL(9, 6),
+    Latitude DECIMAL(9, 6),
+	Longtitude DECIMAL(9, 6),
     Population INT,
     CreatedTime DATETIME NOT NULL DEFAULT GETDATE(),
-    UpdatedTime DATETIME NULL,
-    StateSK INT NOT NULL,
-    SourceID INT NOT NULL,
+    UpdatedTime DATETIME,
+    StateSK INT,
+    SourceID INT,
     FOREIGN KEY (StateSK) REFERENCES STATE(StateSK)
 );
 
 CREATE TABLE AQI (
     AQIEntrySK INT IDENTITY(1,1) PRIMARY KEY,
-    Date DATE NOT NULL,
-    AQI INT NOT NULL,
+    Date DATE,
+    AQI INT,
     Category VARCHAR(50),
     DefiningParameter VARCHAR(50),
     DefiningSite VARCHAR(50),
     NumberOfSitesReporting INT,
     CreatedTime DATETIME NOT NULL DEFAULT GETDATE(),
-    UpdatedTime DATETIME NULL,
-    CountySK INT NOT NULL,
-    SourceID INT NOT NULL,
+    UpdatedTime DATETIME,
+    CountySK INT,
+    SourceID INT,
     FOREIGN KEY (CountySK) REFERENCES COUNTY(CountySK)
 );
