@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SourceToStage"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{39124671-C12D-4F6C-B6B9-4B16B5FDBB8C}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{0C7B7894-B854-455B-8378-7399A0E5FAA8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -576,6 +576,225 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Load Source to Stage AirQualityData\Add SourceID 2021"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID 2021"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Source to Stage AirQualityData\Add SourceID 2022"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID 2022"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">2</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">2</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Source to Stage AirQualityData\Add SourceID 2023"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID 2023"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">3</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">3</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Load Source to Stage AirQualityData\AirQuality_2021"
               componentClassID="Microsoft.FlatFileSource"
@@ -2022,6 +2241,12 @@
                       cachedName="Copy of Date"
                       externalMetadataColumnId="Package\Load Source to Stage AirQualityData\Stage.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
                       lineageId="Package\Load Source to Stage AirQualityData\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]" />
+                    <inputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Stage.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\Load Source to Stage AirQualityData\Stage.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[SourceID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2088,6 +2313,10 @@
                       refId="Package\Load Source to Stage AirQualityData\Stage.Inputs[OLE DB Destination Input].ExternalColumns[LastUpdated]"
                       dataType="dbTimeStamp"
                       name="LastUpdated" />
+                    <externalMetadataColumn
+                      refId="Package\Load Source to Stage AirQualityData\Stage.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      dataType="i4"
+                      name="SourceID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2125,12 +2354,12 @@
               version="1">
               <inputs>
                 <input
-                  refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4]"
+                  refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3]"
                   hasSideEffects="true"
-                  name="Union All Input 4">
+                  name="Union All Input 3">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[State Name]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[State Name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2145,7 +2374,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[county Name]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[county Name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2160,7 +2389,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[State Code]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[State Code]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2175,7 +2404,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[County Code]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[County Code]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2190,7 +2419,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[Date]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[Date]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2205,7 +2434,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[AQI]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[AQI]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2220,7 +2449,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[Category]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[Category]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2235,7 +2464,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[Defining Parameter]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[Defining Parameter]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2250,7 +2479,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[Defining Site]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[Defining Site]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2265,7 +2494,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[Number of Sites Reporting]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[Number of Sites Reporting]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2280,7 +2509,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[Created]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[Created]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2295,7 +2524,7 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4].Columns[Last Updated]"
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[Last Updated]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
@@ -2307,6 +2536,19 @@
                           dataType="System.Int32"
                           description="Output column lineage ID"
                           name="OutputColumnLineageID">#{Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Output].Columns[SourceID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[SourceID]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -2497,6 +2739,19 @@
                           name="OutputColumnLineageID">#{Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 1].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Output].Columns[SourceID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[SourceID]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2685,14 +2940,27 @@
                           name="OutputColumnLineageID">#{Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[Last Updated]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 2].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      lineageId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Output].Columns[SourceID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[SourceID]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3]"
+                  refId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4]"
                   dangling="true"
                   hasSideEffects="true"
-                  name="Union All Input 3">
+                  name="Union All Input 4">
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -2785,6 +3053,11 @@
                       length="50"
                       lineageId="Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[Last Updated]"
                       name="Last Updated" />
+                    <outputColumn
+                      refId="Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[SourceID]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage AirQualityData\Union All.Outputs[Union All Output 1].Columns[SourceID]"
+                      name="SourceID" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -2798,18 +3071,33 @@
               name="Data Conversion Output"
               startId="Package\Load Source to Stage AirQualityData\Data Conversion.Outputs[Data Conversion Output]" />
             <path
+              refId="Package\Load Source to Stage AirQualityData.Paths[Derived Column Output]"
+              endId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 3]"
+              name="Derived Column Output"
+              startId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load Source to Stage AirQualityData.Paths[Derived Column Output1]"
+              endId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load Source to Stage AirQualityData.Paths[Derived Column Output2]"
+              endId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Outputs[Derived Column Output]" />
+            <path
               refId="Package\Load Source to Stage AirQualityData.Paths[Flat File Source Output]"
-              endId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 4]"
+              endId="Package\Load Source to Stage AirQualityData\Add SourceID 2021.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Load Source to Stage AirQualityData\AirQuality_2021.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Load Source to Stage AirQualityData.Paths[Flat File Source Output1]"
-              endId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 1]"
+              endId="Package\Load Source to Stage AirQualityData\Add SourceID 2022.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Load Source to Stage AirQualityData\AirQuality_2022.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Load Source to Stage AirQualityData.Paths[Flat File Source Output2]"
-              endId="Package\Load Source to Stage AirQualityData\Union All.Inputs[Union All Input 2]"
+              endId="Package\Load Source to Stage AirQualityData\Add SourceID 2023.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Load Source to Stage AirQualityData\AirQuality_2023.Outputs[Flat File Source Output]" />
             <path
@@ -3153,6 +3441,185 @@
               </outputs>
             </component>
             <component
+              refId="Package\Load Source to Stage GeographyData\Add state_code, county_code"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add state_code, county_code"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Inputs[Derived Column Input].Columns[Copy of county_fips]"
+                      cachedDataType="i4"
+                      cachedName="Copy of county_fips"
+                      lineageId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_fips]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Output].Columns[state_code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Output].Columns[state_code]"
+                      name="state_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_fips]} / 1000</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">[Copy of county_fips] / 1000</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Output].Columns[county_code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Output].Columns[county_code]"
+                      name="county_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_fips]} % 1000</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">[Copy of county_fips] % 1000</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Source to Stage GeographyData\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load Source to Stage GeographyData\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Source to Stage GeographyData\Data Conversion.Inputs[Data Conversion Input].Columns[&quot;county_fips&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;county_fips&quot;"
+                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;county_fips&quot;]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load Source to Stage GeographyData\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_fips]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_fips]"
+                      name="Copy of county_fips"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns["county_fips"]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load Source to Stage GeographyData\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Load Source to Stage GeographyData\Derived Column"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -3438,11 +3905,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Load Source to Stage GeographyData\State"
+              refId="Package\Load Source to Stage GeographyData\GeographyData"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="State"
+              name="GeographyData"
               usesDispositions="true"
               version="4">
               <properties>
@@ -3495,7 +3962,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Load Source to Stage GeographyData\State.Connections[OleDbConnection]"
+                  refId="Package\Load Source to Stage GeographyData\GeographyData.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[.\SQL22.AirQualityData_Stage]"
                   connectionManagerRefId="Package.ConnectionManagers[.\SQL22.AirQualityData_Stage]"
                   description="The OLE DB runtime connection used to access the database."
@@ -3503,160 +3970,178 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].Columns[&quot;county&quot;]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[&quot;county&quot;]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="&quot;county&quot;"
-                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[County]"
                       lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;county&quot;]" />
                     <inputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].Columns[&quot;county_ascii&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;county_ascii&quot;"
-                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
-                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;county_ascii&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].Columns[&quot;county_full&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;county_full&quot;"
-                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
-                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;county_full&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].Columns[&quot;county_fips&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;county_fips&quot;"
-                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
-                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;county_fips&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].Columns[&quot;state_id&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;state_id&quot;"
-                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
-                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;state_id&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].Columns[&quot;state_name&quot;]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="&quot;state_name&quot;"
-                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
-                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;state_name&quot;]" />
-                    <inputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].Columns[&quot;lat&quot;]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[&quot;lat&quot;]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="&quot;lat&quot;"
-                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[Lat]"
                       lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;lat&quot;]" />
                     <inputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].Columns[&quot;lng&quot;]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[&quot;lng&quot;]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="&quot;lng&quot;"
-                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[Lng]"
                       lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;lng&quot;]" />
                     <inputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].Columns[&quot;population&quot;]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[&quot;population&quot;]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="&quot;population&quot;"
-                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[population]"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
                       lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;population&quot;]" />
+                    <inputColumn
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[&quot;county_ascii&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;county_ascii&quot;"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[CountyAscii]"
+                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;county_ascii&quot;]" />
+                    <inputColumn
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[&quot;county_full&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;county_full&quot;"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[CountyFull]"
+                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;county_full&quot;]" />
+                    <inputColumn
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[&quot;state_id&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;state_id&quot;"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[StateId]"
+                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;state_id&quot;]" />
+                    <inputColumn
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[&quot;state_name&quot;]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="&quot;state_name&quot;"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[StateName]"
+                      lineageId="Package\Load Source to Stage GeographyData\(2B)uscounties.Outputs[Flat File Source Output].Columns[&quot;state_name&quot;]" />
+                    <inputColumn
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[state_code]"
+                      cachedDataType="i4"
+                      cachedName="state_code"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[StateCode]"
+                      lineageId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Output].Columns[state_code]" />
+                    <inputColumn
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[county_code]"
+                      cachedDataType="i4"
+                      cachedName="county_code"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[CountyCode]"
+                      lineageId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Output].Columns[county_code]" />
+                    <inputColumn
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].Columns[Copy of county_fips]"
+                      cachedDataType="i4"
+                      cachedName="Copy of county_fips"
+                      externalMetadataColumnId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[CountyFips]"
+                      lineageId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of county_fips]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[County]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      name="county" />
+                      name="County" />
                     <externalMetadataColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[county_ascii]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[CountyAscii]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      name="county_ascii" />
+                      name="CountyAscii" />
                     <externalMetadataColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[county_full]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[CountyFull]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      name="county_full" />
+                      name="CountyFull" />
                     <externalMetadataColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[county_fips]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[CountyFips]"
                       codePage="1252"
                       dataType="str"
                       length="5"
-                      name="county_fips" />
+                      name="CountyFips" />
                     <externalMetadataColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[state_id]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[StateId]"
                       codePage="1252"
                       dataType="str"
                       length="2"
-                      name="state_id" />
+                      name="StateId" />
                     <externalMetadataColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[state_name]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[StateName]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      name="state_name" />
+                      name="StateName" />
                     <externalMetadataColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[lat]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[Lat]"
                       dataType="numeric"
-                      name="lat"
+                      name="Lat"
                       precision="9"
                       scale="6" />
                     <externalMetadataColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[lng]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[Lng]"
                       dataType="numeric"
-                      name="lng"
+                      name="Lng"
                       precision="9"
                       scale="6" />
                     <externalMetadataColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input].ExternalColumns[population]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[Population]"
                       dataType="i4"
-                      name="population" />
+                      name="Population" />
+                    <externalMetadataColumn
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[StateCode]"
+                      dataType="i4"
+                      name="StateCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input].ExternalColumns[CountyCode]"
+                      dataType="i4"
+                      name="CountyCode" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Load Source to Stage GeographyData\State.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load Source to Stage GeographyData\GeographyData.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Load Source to Stage GeographyData\State.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Source to Stage GeographyData\GeographyData.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Load Source to Stage GeographyData\State.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Source to Stage GeographyData\GeographyData.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Load Source to Stage GeographyData\State.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Source to Stage GeographyData\GeographyData.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3667,10 +4152,20 @@
           </components>
           <paths>
             <path
+              refId="Package\Load Source to Stage GeographyData.Paths[Data Conversion Output]"
+              endId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\Load Source to Stage GeographyData\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
               refId="Package\Load Source to Stage GeographyData.Paths[Derived Column Output]"
-              endId="Package\Load Source to Stage GeographyData\State.Inputs[OLE DB Destination Input]"
+              endId="Package\Load Source to Stage GeographyData\Data Conversion.Inputs[Data Conversion Input]"
               name="Derived Column Output"
               startId="Package\Load Source to Stage GeographyData\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load Source to Stage GeographyData.Paths[Derived Column Output1]"
+              endId="Package\Load Source to Stage GeographyData\GeographyData.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Load Source to Stage GeographyData\Add state_code, county_code.Outputs[Derived Column Output]" />
             <path
               refId="Package\Load Source to Stage GeographyData.Paths[Flat File Source Output]"
               endId="Package\Load Source to Stage GeographyData\Derived Column.Inputs[Derived Column Input]"
@@ -3749,13 +4244,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Truncate AirQuality"
+      DTS:refId="Package\Truncate AirQualityData"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{4B74A5AE-390C-4DB3-B959-C3E181B5EA6D}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Truncate AirQuality"
+      DTS:ObjectName="Truncate AirQualityData"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="1">
       <DTS:Variables />
@@ -3766,13 +4261,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Truncate Geography"
+      DTS:refId="Package\Truncate GeographyData"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{1514f5e5-4275-49cb-8e2a-88e77810abb3}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Truncate Geography"
+      DTS:ObjectName="Truncate GeographyData"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -3791,12 +4286,12 @@
       DTS:From="Package\Set CET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Truncate AirQuality" />
+      DTS:To="Package\Truncate AirQualityData" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{6370D2FC-D01F-49D8-9268-2986BA01BFB5}"
-      DTS:From="Package\Truncate AirQuality"
+      DTS:From="Package\Truncate AirQualityData"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Get LSET, CET" />
@@ -3823,12 +4318,12 @@
       DTS:From="Package\Set CET 1"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
-      DTS:To="Package\Truncate Geography" />
+      DTS:To="Package\Truncate GeographyData" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
       DTS:CreationName=""
       DTS:DTSID="{0DAB1D10-4902-4EE0-B2F0-382EEDE6C9DB}"
-      DTS:From="Package\Truncate Geography"
+      DTS:From="Package\Truncate GeographyData"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
       DTS:To="Package\Get LSET, CET 1" />
@@ -3895,11 +4390,11 @@
           TopLeft="549.66663857384,405.799997884631" />
         <NodeLayout
           Size="164.8,41.6"
-          Id="Package\Truncate AirQuality"
+          Id="Package\Truncate AirQualityData"
           TopLeft="144.99999207755,112.666665883197" />
         <NodeLayout
           Size="164.8,41.6"
-          Id="Package\Truncate Geography"
+          Id="Package\Truncate GeographyData"
           TopLeft="527.499971178672,111.499999186397" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
@@ -4084,101 +4579,57 @@
     design-time-name="Package\Load Source to Stage AirQualityData">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="120,41.6"
           Id="Package\Load Source to Stage AirQualityData\Union All"
-          TopLeft="358.333313754864,140.133332525757" />
-        <NodeLayout
-          Size="105.6,41.6"
-          Id="Package\Load Source to Stage AirQualityData\Stage"
-          TopLeft="361.666646906072,414.266663785908" />
+          TopLeft="365.833313345082,298.733331422872" />
         <NodeLayout
           Size="156,41.6"
           Id="Package\Load Source to Stage AirQualityData\Data Conversion"
-          TopLeft="342.499981286626,304.199997884632" />
-        <EdgeLayout
-          Id="Package\Load Source to Stage AirQualityData.Paths[Union All Output 1]"
-          TopLeft="419.416647520745,181.733332525757">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,122.466665358875"
-              Start="0,0"
-              End="0,114.966665358875">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,114.966665358875" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="350.833314164646,404.73333066351" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\Load Source to Stage AirQualityData\AirQuality_2021"
           TopLeft="134.999992623926,25.1333331585593" />
-        <EdgeLayout
-          Id="Package\Load Source to Stage AirQualityData.Paths[Flat File Source Output]"
-          TopLeft="217.399992623926,66.7333331585593">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="172.933321130938,73.3999993671977"
-              Start="0,0"
-              End="172.933321130938,65.8999993671977">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.8695648046941" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.8695648046941"
-                    Point2="0,47.8695648046941"
-                    Point3="4,47.8695648046941" />
-                  <mssgle:LineSegment
-                    End="168.933321130938,47.8695648046941" />
-                  <mssgle:CubicBezierSegment
-                    Point1="168.933321130938,47.8695648046941"
-                    Point2="172.933321130938,47.8695648046941"
-                    Point3="172.933321130938,51.8695648046941" />
-                  <mssgle:LineSegment
-                    End="172.933321130938,65.8999993671977" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Load Source to Stage AirQualityData\AirQuality_2022"
-          TopLeft="341.666647998824,24.8666668052803" />
+          Size="168.8,41.6"
+          Id="Package\Load Source to Stage AirQualityData\Add SourceID 2022"
+          TopLeft="346.666647725636,124.13333332128" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\Load Source to Stage AirQualityData\AirQuality_2023"
           TopLeft="554.166636388336,25.066667510403" />
+        <NodeLayout
+          Size="105.6,41.6"
+          Id="Package\Load Source to Stage AirQualityData\Stage"
+          TopLeft="376.666646086508,510.466663261586" />
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\Load Source to Stage AirQualityData\Add SourceID 2023"
+          TopLeft="558.333302827346,125.86666664256" />
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\Load Source to Stage AirQualityData\Add SourceID 2021"
+          TopLeft="131.666659472717,121.333332489596" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Load Source to Stage AirQualityData\AirQuality_2022"
+          TopLeft="341.666647998824,24.8666668052803" />
         <EdgeLayout
-          Id="Package\Load Source to Stage AirQualityData.Paths[Flat File Source Output1]"
-          TopLeft="421.199980876844,66.4666668052803">
+          Id="Package\Load Source to Stage AirQualityData.Paths[Flat File Source Output2]"
+          TopLeft="639.649969607841,66.666667510403">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,73.6666657204767"
+              EndConnector="0,59.1999991321569"
               Start="0,0"
-              End="0,66.1666657204767">
+              End="0,51.6999991321569">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,66.1666657204767" />
+                    End="0,51.6999991321569" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4188,31 +4639,131 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Source to Stage AirQualityData.Paths[Flat File Source Output2]"
-          TopLeft="636.566636388336,66.666667510403">
+          Id="Package\Load Source to Stage AirQualityData.Paths[Flat File Source Output1]"
+          TopLeft="427.56664786223,66.4666668052803">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-190.233322633472,73.466665015354"
+              EndConnector="0,57.6666665159996"
               Start="0,0"
-              End="-190.233322633472,65.966665015354">
+              End="0,50.1666665159996">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.9130424013178" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.9130424013178"
-                    Point2="0,47.9130424013178"
-                    Point3="-4,47.9130424013178" />
+                    End="0,50.1666665159996" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Source to Stage AirQualityData.Paths[Flat File Source Output]"
+          TopLeft="216.733326048322,66.7333331585593">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.5999993310372"
+              Start="0,0"
+              End="0,47.0999993310372">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-186.233322633472,47.9130424013178" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-186.233322633472,47.9130424013178"
-                    Point2="-190.233322633472,47.9130424013178"
-                    Point3="-190.233322633472,51.9130424013178" />
+                    End="0,47.0999993310372" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Source to Stage AirQualityData.Paths[Derived Column Output2]"
+          TopLeft="642.733302827346,167.46666664256">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-188.899989482264,131.266664780312"
+              Start="0,0"
+              End="-188.899989482264,123.766664780312">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-190.233322633472,65.966665015354" />
+                    End="0,81.6086944219426" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,81.6086944219426"
+                    Point2="0,85.6086944219426"
+                    Point3="-4,85.6086944219426" />
+                  <mssgle:LineSegment
+                    End="-184.899989482264,85.6086944219426" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-184.899989482264,85.6086944219426"
+                    Point2="-188.899989482264,85.6086944219426"
+                    Point3="-188.899989482264,89.6086944219426" />
+                  <mssgle:LineSegment
+                    End="-188.899989482264,123.766664780312" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Source to Stage AirQualityData.Paths[Derived Column Output1]"
+          TopLeft="428.449980535359,165.73333332128">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,132.999998101592"
+              Start="0,0"
+              End="0,125.499998101592">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,125.499998101592" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Source to Stage AirQualityData.Paths[Derived Column Output]"
+          TopLeft="216.066659472717,162.933332489596">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="181.766653872365,135.799998933276"
+              Start="0,0"
+              End="181.766653872365,128.299998933276">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,84.5652166956148" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,84.5652166956148"
+                    Point2="0,88.5652166956148"
+                    Point3="4,88.5652166956148" />
+                  <mssgle:LineSegment
+                    End="177.766653872365,88.5652166956148" />
+                  <mssgle:CubicBezierSegment
+                    Point1="177.766653872365,88.5652166956148"
+                    Point2="181.766653872365,88.5652166956148"
+                    Point3="181.766653872365,92.5652166956148" />
+                  <mssgle:LineSegment
+                    End="181.766653872365,128.299998933276" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4223,18 +4774,40 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Source to Stage AirQualityData.Paths[Data Conversion Output]"
-          TopLeft="417.483314096349,345.799997884632">
+          TopLeft="429.149980125577,446.33333066351">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,68.466665901276"
+              EndConnector="0,64.133332598076"
               Start="0,0"
-              End="0,60.966665901276">
+              End="0,56.633332598076">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.966665901276" />
+                    End="0,56.633332598076" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Source to Stage AirQualityData.Paths[Union All Output 1]"
+          TopLeft="427.333313754864,340.333331422872">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.399999240638"
+              Start="0,0"
+              End="0,56.899999240638">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.899999240638" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4263,33 +4836,63 @@
     design-time-name="Package\Load Source to Stage GeographyData">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Load Source to Stage GeographyData\Derived Column"
-          TopLeft="329.999995082617,150.999997749925" />
-        <NodeLayout
-          Size="133.6,41.6"
-          Id="Package\Load Source to Stage GeographyData\State"
-          TopLeft="336.999994978309,269.999995976686" />
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="148,41.6"
           Id="Package\Load Source to Stage GeographyData\(2B)uscounties"
           TopLeft="334.999995008111,44.9999993294478" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Load Source to Stage GeographyData\Data Conversion"
+          TopLeft="332.999995037913,226.999996617436" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\Load Source to Stage GeographyData\Add state_code, county_code"
+          TopLeft="307.999995410443,303.999995470047" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Load Source to Stage GeographyData\Derived Column"
+          TopLeft="333.999995023012,129.999998062849" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Load Source to Stage GeographyData\GeographyData"
+          TopLeft="332.999995037914,378.999994352459" />
         <EdgeLayout
           Id="Package\Load Source to Stage GeographyData.Paths[Flat File Source Output]"
-          TopLeft="407.699995045364,86.5999993294478">
+          TopLeft="409.699995015562,86.5999993294478">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,64.3999984204769"
+              EndConnector="0,43.3999987334016"
               Start="0,0"
-              End="0,56.8999984204769">
+              End="0,35.8999987334016">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.8999984204769" />
+                    End="0,35.8999987334016" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Source to Stage GeographyData.Paths[Derived Column Output1]"
+          TopLeft="414.899995224178,345.599995470047">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.3999988824123"
+              Start="0,0"
+              End="0,25.8999988824123">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.8999988824123" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4300,18 +4903,40 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Source to Stage GeographyData.Paths[Derived Column Output]"
-          TopLeft="405.099995030463,192.599997749925">
+          TopLeft="410.699995030463,171.599998062849">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,77.3999982267618"
+              EndConnector="0,55.3999985545871"
               Start="0,0"
-              End="0,69.8999982267618">
+              End="0,47.8999985545871">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,69.8999982267618" />
+                    End="0,47.8999985545871" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Source to Stage GeographyData.Paths[Data Conversion Output]"
+          TopLeft="413.299995224178,268.599996617436">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.3999988526106"
+              Start="0,0"
+              End="0,27.8999988526106">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.8999988526106" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4324,7 +4949,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Source to Stage GeographyData\State">
+    design-time-name="Package\Load Source to Stage GeographyData\GeographyData">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

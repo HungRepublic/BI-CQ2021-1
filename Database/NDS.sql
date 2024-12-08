@@ -6,12 +6,13 @@ GO
 CREATE TABLE STATE (
     StateSK INT IDENTITY(1,1) PRIMARY KEY,
     StateID CHAR(2),
+	StateName VARCHAR(255),
     StateCode CHAR(2),
-    StateName VARCHAR(255),
     CreatedTime DATETIME NOT NULL DEFAULT GETDATE(),
     UpdatedTime DATETIME,
     SourceID INT
 );
+GO
 
 CREATE TABLE COUNTY (
     CountySK INT IDENTITY(1,1) PRIMARY KEY,
@@ -29,6 +30,7 @@ CREATE TABLE COUNTY (
     SourceID INT,
     FOREIGN KEY (StateSK) REFERENCES STATE(StateSK)
 );
+GO
 
 CREATE TABLE AQI (
     AQIEntrySK INT IDENTITY(1,1) PRIMARY KEY,
@@ -44,3 +46,34 @@ CREATE TABLE AQI (
     SourceID INT,
     FOREIGN KEY (CountySK) REFERENCES COUNTY(CountySK)
 );
+GO
+
+CREATE TABLE DefiningParam
+(
+	DefParamSK INT IDENTITY(1,1) PRIMARY KEY,
+	ParamName VARCHAR(255),
+	CreatedTime DATETIME NOT NULL DEFAULT GETDATE(),
+    UpdatedTime DATETIME,
+	SourceID INT
+);
+GO
+
+CREATE TABLE AQICategory
+(
+	CategorySK INT IDENTITY(1,1) PRIMARY KEY,
+	LevelsOfConcern VARCHAR(100),
+    Description VARCHAR(200),
+	minValuesOfIndex INT,
+    maxValuesOfIndex INT,
+    DailyAQIColor VARCHAR(10),
+	CreatedTime DATETIME NOT NULL DEFAULT GETDATE(),
+    UpdatedTime DATETIME,
+	SourceID INT
+);
+GO
+
+select * from STATE
+SELECT * FROM COUNTY
+SELECT * FROM DefiningParam
+SELECT * FROM AQI
+SELECT * FROM AQICategory

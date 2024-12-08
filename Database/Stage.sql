@@ -4,15 +4,17 @@ USE [AirQualityData_Stage]
 GO
 
 CREATE TABLE GeographyData (
-    county VARCHAR(255),
-    county_ascii VARCHAR(255),
-    county_full VARCHAR(255),
-    county_fips CHAR(5),
-    state_id CHAR(2),
-    state_name VARCHAR(255),
-    lat DECIMAL(9, 6),
-    lng DECIMAL(9, 6),
-    population INT
+    County VARCHAR(255),
+    CountyAscii VARCHAR(255),
+    CountyFull VARCHAR(255),
+    CountyFips CHAR(5),
+    StateId CHAR(2),
+    StateName VARCHAR(255),
+    Lat DECIMAL(9, 6),
+    Lng DECIMAL(9, 6),
+    Population INT,
+	StateCode int,
+	CountyCode int
 );
 
 CREATE TABLE AirQualityData (
@@ -27,5 +29,7 @@ CREATE TABLE AirQualityData (
     DefiningSite VARCHAR(50),
     NumberOfSiteRep INT,
     Created DATETIME,
-    LastUpdated DATETIME
+    LastUpdated DATETIME,
+	SourceID INT
 );
+
