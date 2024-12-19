@@ -15,12 +15,12 @@ SELECT 'AirQualityData' AS TableName, GETDATE() AS CET;
 INSERT INTO data_flow (TableName, CET)
 SELECT 'GeographyData' AS TableName, GETDATE() AS CET; 
 INSERT INTO data_flow (TableName, CET)
-SELECT 'definingParamDim' AS TableName, GETDATE() AS CET; 
+SELECT 'DefiningParamDim' AS TableName, GETDATE() AS CET; 
 INSERT INTO data_flow (TableName, CET)
-SELECT 'stateDimension' AS TableName, GETDATE() AS CET; 
+SELECT 'StateDimension' AS TableName, GETDATE() AS CET; 
 INSERT INTO data_flow (TableName, CET)
-SELECT 'countyDimension' AS TableName, GETDATE() AS CET; 
+SELECT 'CountyDimension' AS TableName, GETDATE() AS CET; 
 INSERT INTO data_flow (TableName, CET)
-SELECT 'aqiCategoryDim' AS TableName, GETDATE() AS CET; 
+SELECT 'AqiCategoryDim' AS TableName, GETDATE() AS CET; 
 INSERT INTO data_flow (TableName, CET)
-SELECT 'aqiFactTable' AS TableName, GETDATE() AS CET; 
+SELECT 'AqiFactTable' AS TableName, GETDATE() AS CET; 

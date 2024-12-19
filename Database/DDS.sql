@@ -5,9 +5,9 @@ GO
 USE AirQualityData_DDS;
 GO
 
--- Tạo bảng DateDimension
 CREATE TABLE DateDimension (
-    DateSK INT NOT NULL IDENTITY(1, 1),
+    DateSK INT IDENTITY(1, 1) NOT NULL PRIMARY KEY,
+	DATE DATE,
     Day INT,
     Month INT,
     Quarter INT,
@@ -15,57 +15,54 @@ CREATE TABLE DateDimension (
     DayLightSaving INT,
     CreatedDate DATETIME,
     UpdatedDate DATETIME,
-    SourceID INT,
-    CONSTRAINT PK_DateDimension PRIMARY KEY (DateSK)
+    SourceID INT
 );
 GO
 
 -- Tạo bảng DefiningParamDim
 CREATE TABLE DefiningParamDim (
-    DefParamSK INT,
+    DefParamSK INT PRIMARY KEY,
     ParaName VARCHAR(100),
     CreatedTime DATETIME,
     UpdatedTime DATETIME,
-    SourceID INT,
-    CONSTRAINT PK_DefiningParamDim PRIMARY KEY (DefParamSK)
+    SourceID INT
 );
 GO
 
 -- Tạo bảng StateDimension
 CREATE TABLE StateDimension (
-    StateSK INT,
+    StateSK INT PRIMARY KEY,
     StateName VARCHAR(255),
-    StateID VARCHAR(10),
+    StateID VARCHAR(2),
     CreatedTime DATETIME,
     UpdatedTime DATETIME,
-    SourceID INT,
-    CONSTRAINT PK_StateDimension PRIMARY KEY (StateSK)
+    SourceID INT
 );
 GO
 
 -- Tạo bảng CountyDimension
 CREATE TABLE CountyDimension (
-    CountySK INT,
-    CountyCode CHAR(5),
+    CountySK INT PRIMARY KEY,
+    CountyCode INT,
     CountyName VARCHAR(255),
     CountyNameAscii VARCHAR(255),
     CountyFull VARCHAR(255),
-    CountyFips CHAR(5),
+    CountyFips INT,
     Latitude DECIMAL(9, 6),
-	Longtitude DECIMAL(9, 6),
+    Longitude DECIMAL(9, 6),
     Population INT,
     CreatedTime DATETIME,
     UpdatedTime DATETIME,
     StateSK INT,
     SourceID INT,
     CONSTRAINT FK_CountyDimension_StateDimension FOREIGN KEY (StateSK)
-    REFERENCES StateDimension(StateSK)
+        REFERENCES StateDimension(StateSK)
 );
 GO
 
 -- Tạo bảng AQICategoryDim
 CREATE TABLE AQICategoryDim (
-    CategorySK INT,
+    CategorySK INT PRIMARY KEY,
     LevelsOfConcern VARCHAR(100),
     Description VARCHAR(200),
     MinValuesOfIndex INT,
@@ -73,14 +70,13 @@ CREATE TABLE AQICategoryDim (
     DailyAQIColor VARCHAR(10),
     CreatedTime DATETIME,
     UpdatedTime DATETIME,
-    SourceID INT,
-    CONSTRAINT PK_AQICategoryDim PRIMARY KEY (CategorySK)
+    SourceID INT
 );
 GO
 
 -- Tạo bảng AQIFactTable
 CREATE TABLE AQIFactTable (
-    AQISK INT NOT NULL IDENTITY(1, 1),
+    AQISK INT IDENTITY(1, 1) NOT NULL PRIMARY KEY,
     DateSK INT,
     CountySK INT,
     CategorySK INT,
@@ -89,13 +85,14 @@ CREATE TABLE AQIFactTable (
     CreatedDate DATETIME,
     UpdatedDate DATETIME,
     SourceID INT,
-    CONSTRAINT PK_AQIFactTable PRIMARY KEY (AQISK),
     CONSTRAINT FK_AQIFactTable_DateDimension FOREIGN KEY (DateSK)
-    REFERENCES DateDimension(DateSK),
+        REFERENCES DateDimension(DateSK),
+    CONSTRAINT FK_AQIFactTable_CountyDimension FOREIGN KEY (CountySK)
+        REFERENCES CountyDimension(CountySK),
     CONSTRAINT FK_AQIFactTable_AQICategoryDim FOREIGN KEY (CategorySK)
-    REFERENCES AQICategoryDim(CategorySK),
+        REFERENCES AQICategoryDim(CategorySK),
     CONSTRAINT FK_AQIFactTable_DefiningParamDim FOREIGN KEY (DefParamSK)
-    REFERENCES DefiningParamDim(DefParamSK)
+        REFERENCES DefiningParamDim(DefParamSK)
 );
 GO
 
@@ -103,8 +100,10 @@ GO
 CREATE OR ALTER PROCEDURE PopulateDateDimension
 AS
 BEGIN
-    INSERT INTO DateDimension (Day, Month, Quarter, Year, DayLightSaving)
+    -- Insert dữ liệu vào DateDimension
+    INSERT INTO DateDimension (DATE, Day, Month, Quarter, Year, DayLightSaving, CreatedDate, UpdatedDate, SourceID)
     SELECT 
+        Date AS DATE, -- Thêm giá trị Date trực tiếp vào cột DATE
         DAY(Date) AS Day,
         MONTH(Date) AS Month,
         CASE
@@ -115,9 +114,13 @@ BEGIN
         END AS Quarter,
         YEAR(Date) AS Year,
         CASE
+            -- Áp dụng quy tắc DayLightSaving cho từng ngày
             WHEN Date BETWEEN '2023-03-12' AND '2023-11-05' THEN 1
             ELSE 0
-        END AS DayLightSaving
+        END AS DayLightSaving,
+        GETDATE() AS CreatedDate, -- Thêm giá trị thời gian tạo
+        GETDATE() AS UpdatedDate, -- Thêm giá trị thời gian cập nhật
+        NULL AS SourceID          -- Giữ SourceID NULL nếu không có giá trị tương ứng
     FROM 
         (SELECT DISTINCT Date FROM AirQualityData_NDS.dbo.AQI) AQI
     ORDER BY
@@ -125,8 +128,10 @@ BEGIN
 END;
 GO
 
+
 -- Gọi thủ tục và kiểm tra dữ liệu
 EXEC PopulateDateDimension;
 
-Select * from StateDimension
-Select * from CountyDimension
+Select * from DateDimension
+Select * from CountyDimension;
+Select * from AQIFactTable WHERE AQI = 500;

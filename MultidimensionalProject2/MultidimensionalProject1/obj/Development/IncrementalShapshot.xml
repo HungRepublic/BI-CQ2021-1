@@ -1,0 +1,82 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>MultidimensionalProject</Database>
+    <Server>DESKTOP-MUA1L7B</Server>
+    <ConnectionString>Data Source=DESKTOP-MUA1L7B;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>dctHPy8APuHDjHz8I7nzoHzEtdA=12/20/2024 4:07:13 AM12/20/2024 3:05:21 AM</TimeStamp>
+        <ID>
+          <String>Air Quality Data DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>NbThXARPIN54yFDJR8Txp0bodk8=12/20/2024 4:08:17 AM12/20/2024 4:08:17 AM</TimeStamp>
+        <ID>
+          <String>Air Quality Data DDS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>98IcHnT5y1W5b1hCrgaYIPJ6VHI=12/20/2024 4:00:57 AM12/20/2024 3:05:53 AM</TimeStamp>
+        <ID>
+          <String>AQI Category Dim</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KvSu7sq9PFZFD+vkSg/NC3glU6k=12/20/2024 3:05:53 AM12/20/2024 3:05:53 AM</TimeStamp>
+        <ID>
+          <String>Defining Param Dim</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>BcW75U43a+71sjGz6yrPw9kcjZA=12/20/2024 4:08:49 AM12/20/2024 3:05:53 AM</TimeStamp>
+        <ID>
+          <String>Date Dimension</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>o9gAgWap88M5sdIo3cvnbsoUjoQ=12/20/2024 3:07:46 AM12/20/2024 3:05:53 AM</TimeStamp>
+        <ID>
+          <String>County Dimension</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>PXUp1N6Ys4ktGpLOOPtC7ssmiBM=12/20/2024 4:08:49 AM12/20/2024 3:05:53 AMVr/Emx6QXFMvBK20XzvHnM/AkLM=12/20/2024 3:39:17 AM12/20/2024 3:05:53 AM</TimeStamp>
+        <ID>
+          <String>Air Quality Data DDS</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>1bbT8AUE0Hpc2vLn+NdN1M3/8Gc=12/10/2024 9:40:44 PM12/9/2024 9:38:32 PM</TimeStamp>
+      <ID>
+        <String>MultidimensionalProject</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2024-12-19T21:09:09.293333Z</LastDeployed>
+</DeploymentSnapshot>

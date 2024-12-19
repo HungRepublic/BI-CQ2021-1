@@ -7,7 +7,7 @@ CREATE TABLE STATE (
     StateSK INT IDENTITY(1,1) PRIMARY KEY,
     StateID CHAR(2),
 	StateName VARCHAR(255),
-    StateCode CHAR(2),
+    StateCode INT,
     CreatedTime DATETIME NOT NULL DEFAULT GETDATE(),
     UpdatedTime DATETIME,
     SourceID INT
@@ -16,11 +16,11 @@ GO
 
 CREATE TABLE COUNTY (
     CountySK INT IDENTITY(1,1) PRIMARY KEY,
-    CountyCode CHAR(5),
+    CountyCode INT,
     CountyName VARCHAR(255),
     CountyNameAscii VARCHAR(255),
     CountyFull VARCHAR(255),
-    CountyFips CHAR(5),
+    CountyFips INT,
     Latitude DECIMAL(9, 6),
 	Longtitude DECIMAL(9, 6),
     Population INT,
@@ -72,8 +72,9 @@ CREATE TABLE AQICategory
 );
 GO
 
-select * from STATE
+select * from STATE		
 SELECT * FROM COUNTY
+SELECT * FROM AQI;
 SELECT * FROM DefiningParam
-SELECT * FROM AQI
 SELECT * FROM AQICategory
+

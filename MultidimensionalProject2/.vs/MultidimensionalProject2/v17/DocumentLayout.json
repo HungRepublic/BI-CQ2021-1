@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BI\\ETL\\MultidimensionalProject2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2613A7-7B89-4C41-B122-62E7CA9C5F4F}|MultidimensionalProject1\\MultidimensionalProject1.dwproj|D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\Date Dimension.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{FA2613A7-7B89-4C41-B122-62E7CA9C5F4F}|MultidimensionalProject1\\MultidimensionalProject1.dwproj|solutionrelative:MultidimensionalProject1\\Date Dimension.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2613A7-7B89-4C41-B122-62E7CA9C5F4F}|MultidimensionalProject1\\MultidimensionalProject1.dwproj|D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\AQI Category Dim.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{FA2613A7-7B89-4C41-B122-62E7CA9C5F4F}|MultidimensionalProject1\\MultidimensionalProject1.dwproj|solutionrelative:MultidimensionalProject1\\AQI Category Dim.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2613A7-7B89-4C41-B122-62E7CA9C5F4F}|MultidimensionalProject1\\MultidimensionalProject1.dwproj|D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\Air Quality Data DDS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{FA2613A7-7B89-4C41-B122-62E7CA9C5F4F}|MultidimensionalProject1\\MultidimensionalProject1.dwproj|solutionrelative:MultidimensionalProject1\\Air Quality Data DDS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2613A7-7B89-4C41-B122-62E7CA9C5F4F}|MultidimensionalProject1\\MultidimensionalProject1.dwproj|D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\Air Quality Data DDS.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{FA2613A7-7B89-4C41-B122-62E7CA9C5F4F}|MultidimensionalProject1\\MultidimensionalProject1.dwproj|solutionrelative:MultidimensionalProject1\\Air Quality Data DDS.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Date Dimension.dim [Design]",
+              "DocumentMoniker": "D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\Date Dimension.dim",
+              "RelativeDocumentMoniker": "MultidimensionalProject1\\Date Dimension.dim",
+              "ToolTip": "D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\Date Dimension.dim [Design]",
+              "RelativeToolTip": "MultidimensionalProject1\\Date Dimension.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-19T21:08:32.659Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AQI Category Dim.dim [Design]",
+              "DocumentMoniker": "D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\AQI Category Dim.dim",
+              "RelativeDocumentMoniker": "MultidimensionalProject1\\AQI Category Dim.dim",
+              "ToolTip": "D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\AQI Category Dim.dim [Design]",
+              "RelativeToolTip": "MultidimensionalProject1\\AQI Category Dim.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-19T21:08:29.717Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Air Quality Data DDS.dsv [Design]",
+              "DocumentMoniker": "D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\Air Quality Data DDS.dsv",
+              "RelativeDocumentMoniker": "MultidimensionalProject1\\Air Quality Data DDS.dsv",
+              "ToolTip": "D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\Air Quality Data DDS.dsv [Design]",
+              "RelativeToolTip": "MultidimensionalProject1\\Air Quality Data DDS.dsv [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-19T21:08:23.263Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Air Quality Data DDS.cube [Design]",
+              "DocumentMoniker": "D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\Air Quality Data DDS.cube",
+              "RelativeDocumentMoniker": "MultidimensionalProject1\\Air Quality Data DDS.cube",
+              "ToolTip": "D:\\BI\\ETL\\MultidimensionalProject2\\MultidimensionalProject1\\Air Quality Data DDS.cube [Design]",
+              "RelativeToolTip": "MultidimensionalProject1\\Air Quality Data DDS.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-19T21:06:58.91Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

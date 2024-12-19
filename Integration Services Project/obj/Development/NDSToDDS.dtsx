@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="NDSToDDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="69"
-  DTS:VersionGUID="{3438FA0D-6193-4FA8-8DB8-BDA8F18BEE11}">
+  DTS:VersionBuild="78"
+  DTS:VersionGUID="{01495B25-6D17-47FB-B433-6D26AA410667}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -83,7 +83,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="GET LSET, SET AQICategoryDim"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -183,7 +183,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="GET LSET, SET StateDimension"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1627,12 +1627,10 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountyCode]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
-                          length="5"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountyCode]"
                           name="CountyCode"
                           truncationRowDisposition="IgnoreFailure" />
@@ -1671,12 +1669,10 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountyFips]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].ExternalColumns[CountyFips]"
-                          length="5"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountyFips]"
                           name="CountyFips"
                           truncationRowDisposition="IgnoreFailure" />
@@ -1756,9 +1752,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           name="CountySK" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].ExternalColumns[CountyCode]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
+                          dataType="i4"
                           name="CountyCode" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].ExternalColumns[CountyName]"
@@ -1780,9 +1774,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           name="CountyFull" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].ExternalColumns[CountyFips]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
+                          dataType="i4"
                           name="CountyFips" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
@@ -1830,9 +1822,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           name="CountySK" />
                         <outputColumn
                           refId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
+                          dataType="i4"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Error Output].Columns[CountyCode]"
                           name="CountyCode" />
                         <outputColumn
@@ -1858,9 +1848,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           name="CountyFull" />
                         <outputColumn
                           refId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Error Output].Columns[CountyFips]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
+                          dataType="i4"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Error Output].Columns[CountyFips]"
                           name="CountyFips" />
                         <outputColumn
@@ -1999,9 +1987,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountySK]" />
                         <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].Columns[CountyCode]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="5"
+                          cachedDataType="i4"
                           cachedName="CountyCode"
                           externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyCode]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountyCode]" />
@@ -2031,9 +2017,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountyFull]" />
                         <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].Columns[CountyFips]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="5"
+                          cachedDataType="i4"
                           cachedName="CountyFips"
                           externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyFips]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountyFips]" />
@@ -2045,14 +2029,6 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           cachedScale="6"
                           externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[Latitude]" />
-                        <inputColumn
-                          refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].Columns[Longtitude]"
-                          cachedDataType="numeric"
-                          cachedName="Longtitude"
-                          cachedPrecision="9"
-                          cachedScale="6"
-                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longtitude]"
-                          lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[Longtitude]" />
                         <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].Columns[Population]"
                           cachedDataType="i4"
@@ -2092,9 +2068,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           name="CountySK" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyCode]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
+                          dataType="i4"
                           name="CountyCode" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyName]"
@@ -2116,9 +2090,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           name="CountyFull" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyFips]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
+                          dataType="i4"
                           name="CountyFips" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
@@ -2127,9 +2099,9 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           precision="9"
                           scale="6" />
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longtitude]"
+                          refId="Package\Sequence Container\Load CountyDimension\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                           dataType="numeric"
-                          name="Longtitude"
+                          name="Longitude"
                           precision="9"
                           scale="6" />
                         <externalMetadataColumn
@@ -2198,7 +2170,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                       description="The SQL command to be executed."
                       expressionType="Notify"
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[CountyDimension] SET [CountyCode] = ?,[CountyFips] = ?,[CountyFull] = ?,[CountyName] = ?,[CountyNameAscii] = ?,[CreatedTime] = ?,[Latitude] = ?,[Longtitude] = ?,[Population] = ?,[SourceID] = ?,[StateSK] = ?,[UpdatedTime] = ? WHERE [CountySK] = ?</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[CountyDimension] SET [CountyCode] = ?,[CountyFips] = ?,[CountyFull] = ?,[CountyName] = ?,[CountyNameAscii] = ?,[CreatedTime] = ?,[Latitude] = ?,[Population] = ?,[SourceID] = ?,[StateSK] = ?,[UpdatedTime] = ? WHERE [CountySK] = ?</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2222,17 +2194,13 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                       <inputColumns>
                         <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[CountyCode]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="5"
+                          cachedDataType="i4"
                           cachedName="CountyCode"
                           externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountyCode]" />
                         <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[CountyFips]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="5"
+                          cachedDataType="i4"
                           cachedName="CountyFips"
                           externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountyFips]" />
@@ -2264,7 +2232,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[CountySK]"
                           cachedDataType="i4"
                           cachedName="CountySK"
-                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[CountySK]" />
                         <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[CreatedTime]"
@@ -2281,64 +2249,52 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[Latitude]" />
                         <inputColumn
-                          refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[Longtitude]"
-                          cachedDataType="numeric"
-                          cachedName="Longtitude"
-                          cachedPrecision="9"
-                          cachedScale="6"
-                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                          lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[Longtitude]" />
-                        <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[Population]"
                           cachedDataType="i4"
                           cachedName="Population"
-                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[Population]" />
                         <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[SourceID]"
                           cachedDataType="i4"
                           cachedName="SourceID"
-                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[SourceID]" />
                         <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[StateSK]"
                           cachedDataType="i4"
                           cachedName="StateSK"
-                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[StateSK]" />
                         <inputColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].Columns[UpdatedTime]"
                           cachedDataType="dbTimeStamp"
                           cachedName="UpdatedTime"
-                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                          externalMetadataColumnId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
                           lineageId="Package\Sequence Container\Load CountyDimension\COUNTY.Outputs[OLE DB Source Output].Columns[UpdatedTime]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
+                          dataType="i4"
                           name="Param_0">
                           <properties>
                             <property
                               dataType="System.Int32"
                               description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                              name="DBParamInfoFlags">65</property>
+                              name="DBParamInfoFlags">81</property>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="5"
+                          dataType="i4"
                           name="Param_1">
                           <properties>
                             <property
                               dataType="System.Int32"
                               description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                              name="DBParamInfoFlags">65</property>
+                              name="DBParamInfoFlags">81</property>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
@@ -2406,10 +2362,8 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                         </externalMetadataColumn>
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                          dataType="numeric"
-                          name="Param_7"
-                          precision="9"
-                          scale="6">
+                          dataType="i4"
+                          name="Param_7">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -2441,19 +2395,8 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                         </externalMetadataColumn>
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
-                          dataType="i4"
-                          name="Param_10">
-                          <properties>
-                            <property
-                              dataType="System.Int32"
-                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                              name="DBParamInfoFlags">81</property>
-                          </properties>
-                        </externalMetadataColumn>
-                        <externalMetadataColumn
-                          refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                           dataType="dbTimeStamp"
-                          name="Param_11">
+                          name="Param_10">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -2462,14 +2405,14 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
-                          refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                          refId="Package\Sequence Container\Load CountyDimension\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                           dataType="i4"
-                          name="Param_12">
+                          name="Param_11">
                           <properties>
                             <property
                               dataType="System.Int32"
                               description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                              name="DBParamInfoFlags">81</property>
+                              name="DBParamInfoFlags">17</property>
                           </properties>
                         </externalMetadataColumn>
                       </externalMetadataColumns>
@@ -2581,7 +2524,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                             <property
                               dataType="System.Int32"
                               description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                              name="DBParamInfoFlags">81</property>
+                              name="DBParamInfoFlags">17</property>
                           </properties>
                         </externalMetadataColumn>
                       </externalMetadataColumns>
@@ -3063,7 +3006,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                     <input
                       refId="Package\Sequence Container\Load DefiningParamDim\DefiningParamDim.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
-                      errorRowDisposition="IgnoreFailure"
+                      errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
@@ -3288,12 +3231,10 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           truncationRowDisposition="IgnoreFailure" />
                         <outputColumn
                           refId="Package\Sequence Container\Load StateDimension\STATE.Outputs[OLE DB Source Output].Columns[StateCode]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="IgnoreFailure"
                           externalMetadataColumnId="Package\Sequence Container\Load StateDimension\STATE.Outputs[OLE DB Source Output].ExternalColumns[StateCode]"
-                          length="2"
                           lineageId="Package\Sequence Container\Load StateDimension\STATE.Outputs[OLE DB Source Output].Columns[StateCode]"
                           name="StateCode"
                           truncationRowDisposition="IgnoreFailure" />
@@ -3335,9 +3276,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           name="StateID" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load StateDimension\STATE.Outputs[OLE DB Source Output].ExternalColumns[StateCode]"
-                          codePage="1252"
-                          dataType="str"
-                          length="2"
+                          dataType="i4"
                           name="StateCode" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load StateDimension\STATE.Outputs[OLE DB Source Output].ExternalColumns[StateName]"
@@ -3366,9 +3305,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           name="StateID" />
                         <outputColumn
                           refId="Package\Sequence Container\Load StateDimension\STATE.Outputs[OLE DB Source Error Output].Columns[StateCode]"
-                          codePage="1252"
-                          dataType="str"
-                          length="2"
+                          dataType="i4"
                           lineageId="Package\Sequence Container\Load StateDimension\STATE.Outputs[OLE DB Source Error Output].Columns[StateCode]"
                           name="StateCode" />
                         <outputColumn
@@ -3539,7 +3476,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
                           refId="Package\Sequence Container\Load StateDimension\StateDimension.Inputs[OLE DB Destination Input].ExternalColumns[StateID]"
                           codePage="1252"
                           dataType="str"
-                          length="10"
+                          length="2"
                           name="StateID" />
                         <externalMetadataColumn
                           refId="Package\Sequence Container\Load StateDimension\StateDimension.Inputs[OLE DB Destination Input].ExternalColumns[CreatedTime]"
@@ -3637,7 +3574,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
       DTS:LocaleID="-1"
       DTS:ObjectName="SET CET AQICategoryDim"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="4">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -3706,7 +3643,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
       DTS:LocaleID="-1"
       DTS:ObjectName="SET CET StateDimension"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="4">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4290,7 +4227,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
     design-time-name="Package\Sequence Container\Load AQICategoryDim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="156.8,41.6"
           Id="Package\Sequence Container\Load AQICategoryDim\AQICategoryDim"
@@ -4318,9 +4255,7 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4353,90 +4288,86 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152.8,41.6"
+          Size="170.4,41.6"
           Id="Package\Sequence Container\Load AQIFactTable\Derived Column"
-          TopLeft="241.999996393919,146.999997809529" />
+          TopLeft="231.999996542931,146.999997809529" />
         <NodeLayout
-          Size="152,41.6"
+          Size="168.8,41.6"
           Id="Package\Sequence Container\Load AQIFactTable\AQI"
-          TopLeft="245.833330332405,47.0000001937151" />
+          TopLeft="233.833330511219,47.0000001937151" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\Sequence Container\Load AQIFactTable\AQIFactTable"
-          TopLeft="233.999997407198,342.933329792288" />
+          TopLeft="233.999997407198,354.471791158813" />
         <NodeLayout
-          Size="176.8,41.6"
+          Size="172.8,41.6"
           Id="Package\Sequence Container\Load AQIFactTable\Lookup DateSK in DateDimension"
           TopLeft="230.999996557832,246.999996319413" />
         <EdgeLayout
           Id="Package\Sequence Container\Load AQIFactTable.Paths[OLE DB Source Output]"
-          TopLeft="320.116663363162,88.6000001937151">
+          TopLeft="317.716663527075,88.6000001937151">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58.3999976158142"
+              EndConnector="0,58.3999976158139"
               Start="0,0"
-              End="0,50.8999976158142">
+              End="0,50.8999976158139">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.8999976158142" />
+                    End="0,50.8999976158139" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container\Load AQIFactTable.Paths[Lookup Match Output]"
-          TopLeft="319.499996982515,288.599996319413">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54.3333334728744"
-              Start="0,0"
-              End="0,46.8333334728744">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.8333334728744" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,17.6119792364372,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container\Load AQIFactTable.Paths[Derived Column Output]"
-          TopLeft="318.899996475875,188.599997809529">
+          TopLeft="317.299996550381,188.599997809529">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58.3999985098839"
+              EndConnector="0,58.399998509884"
               Start="0,0"
-              End="0,50.8999985098839">
+              End="0,50.899998509884">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.8999985098839" />
+                    End="0,50.899998509884" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container\Load AQIFactTable.Paths[Lookup Match Output]"
+          TopLeft="318.499996982515,288.599996319413">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.8717948394001"
+              Start="0,0"
+              End="0,58.3717948394001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.3717948394001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-48.19138671875,23.3812099197,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4493,64 +4424,16 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Sequence Container\Load CountyDimension\OLE DB Command"
-          TopLeft="225.5,208.7" />
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Sequence Container\Load CountyDimension\OLE DB Command 1"
-          TopLeft="453.1,208.7" />
-        <NodeLayout
           Size="208,41.6"
           Id="Package\Sequence Container\Load CountyDimension\Slowly Changing Dimension"
-          TopLeft="205.1,107.1" />
-        <NodeLayout
-          Size="159.2,41.6"
-          Id="Package\Sequence Container\Load CountyDimension\Insert Destination"
-          TopLeft="5.50000000000009,208.7" />
+          TopLeft="206.7,107.1" />
         <NodeLayout
           Size="152,41.6"
           Id="Package\Sequence Container\Load CountyDimension\COUNTY"
-          TopLeft="233.1,5.49999999999984" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Load CountyDimension.Paths[Changing Attribute Updates Output]"
-          TopLeft="359.1,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="182,60"
-              Start="0,0"
-              End="182,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.506329113924" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.506329113924"
-                    Point2="0,20.506329113924"
-                    Point3="4,20.506329113924" />
-                  <mssgle:LineSegment
-                    End="178,20.506329113924" />
-                  <mssgle:CubicBezierSegment
-                    Point1="178,20.506329113924"
-                    Point2="182,20.506329113924"
-                    Point3="182,24.506329113924" />
-                  <mssgle:LineSegment
-                    End="182,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="12.46609375,25.506329113924,157.0678125,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="234.7,5.49999999999984" />
         <EdgeLayout
           Id="Package\Sequence Container\Load CountyDimension.Paths[OLE DB Source Output]"
-          TopLeft="309.1,47.0999999999998">
+          TopLeft="310.7,47.0999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4567,14 +4450,16 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Sequence Container\Load CountyDimension\Insert Destination"
+          TopLeft="5.5000000000001,208.7" />
         <EdgeLayout
           Id="Package\Sequence Container\Load CountyDimension.Paths[New Output]"
-          TopLeft="259.1,148.7">
+          TopLeft="260.7,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4608,9 +4493,13 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Sequence Container\Load CountyDimension\OLE DB Command"
+          TopLeft="228.3,208.7" />
         <EdgeLayout
           Id="Package\Sequence Container\Load CountyDimension.Paths[Inferred Member Updates Output]"
-          TopLeft="309.1,148.7">
+          TopLeft="310.7,148.7">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -4629,6 +4518,46 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Sequence Container\Load CountyDimension\OLE DB Command 1"
+          TopLeft="453.5,208.7" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Load CountyDimension.Paths[Changing Attribute Updates Output]"
+          TopLeft="360.7,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="180,60"
+              Start="0,0"
+              End="180,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.506329113924" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.506329113924"
+                    Point2="0,20.506329113924"
+                    Point3="4,20.506329113924" />
+                  <mssgle:LineSegment
+                    End="176,20.506329113924" />
+                  <mssgle:CubicBezierSegment
+                    Point1="176,20.506329113924"
+                    Point2="180,20.506329113924"
+                    Point3="180,24.506329113924" />
+                  <mssgle:LineSegment
+                    End="180,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="11.46609375,25.506329113924,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4691,12 +4620,6 @@ where (CreatedTime &gt;= ? AND CreatedTime &lt; ?) OR (UpdatedTime &gt;=? AND Up
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;COUNTY.Outputs[OLE DB Source Output].Columns[Latitude]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;Latitude&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;COUNTY.Outputs[OLE DB Source Output].Columns[Longtitude]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Longtitude&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;

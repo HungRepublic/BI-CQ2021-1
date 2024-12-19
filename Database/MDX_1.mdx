@@ -1,0 +1,108 @@
+﻿--6: Design a report to demonstrate the AQI fluctuation trends over the year for the four following states: Hawaii, Alaska, Illinois and California.
+SELECT 
+    NONEMPTY(
+        CROSSJOIN([Measures].[AQI], [Date Dimension].[Hierarchy].[Year])
+        )
+    ON COLUMNS,
+    NONEMPTY(
+    {[County Dimension].[State Name].&[Hawaii],
+    [County Dimension].[State Name].&[Alaska],
+    [County Dimension].[State Name].&[Illinois],
+    [County Dimension].[State Name].&[California]}
+    ) ON ROWS
+FROM [Air Quality Data DDS]
+
+--5. For the four following states: Hawaii, Alaska, Illinois and Delaware, compute the mean AQI value by quarters.
+SELECT 
+    NONEMPTY(
+        CROSSJOIN(
+            [Date Dimension].[Hierarchy].[Year].ALLMEMBERS,
+            [Date Dimension].[Quarter].[Quarter].ALLMEMBERS
+        )
+    ) ON ROWS,
+    NONEMPTY(
+        {
+            [County Dimension].[State Name].&[Hawaii],
+            [County Dimension].[State Name].&[Alaska],
+            [County Dimension].[State Name].&[Illinois],
+            [County Dimension].[State Name].&[Delaware]
+        }
+    ) ON COLUMNS
+FROM [Air Quality Data DDS]
+WHERE ([Measures].[Mean AQI])
+
+--4. For the four following states: Hawaii, Alaska, Illinois and Delaware, count the number of days in each air quality Category (Good, Moderate,etc.) by County.
+WITH
+MEMBER [Measures].[DaysInCategory] as
+	COUNT(
+		FILTER(
+			[Date Dimension].[Date SK].[Date SK].MEMBERS,
+			NOT IsEmpty([Measures].[AQI])
+		)
+	)
+
+SELECT 
+	NONEMPTY(
+		[AQI Category Dim].[Category SK].[Category SK].MEMBERS
+		* {[Measures].[DaysInCategory]}
+	)ON COLUMNS,
+	NONEMPTY(
+        {
+            [County Dimension].[State Name].&[Hawaii],
+            [County Dimension].[State Name].&[Alaska],
+            [County Dimension].[State Name].&[Illinois],
+            [County Dimension].[State Name].&[Delaware]}
+			* [County Dimension].[County Name].[County Name].MEMBERS
+    ) ON ROWS
+FROM [Air Quality Data DDS]
+WHERE ([Date Dimension].[Date SK])
+
+--3. Report the number of days, and the mean AQI value where the air quality is rated as "very unhealthy" or worse for each State and County.
+WITH
+Member [Measures].[DayWithBadAQI] AS
+	COUNT(
+		FILTER(
+			[Date Dimension].[Date SK].[Date SK].Members,
+			([Measures].[AQI], [AQI Category Dim].[Category SK].&[5]) > 0 
+			OR
+			([Measures].[AQI], [AQI Category Dim].[Category SK].&[6]) > 0 
+		)
+	)
+	SELECT 
+		{[Measures].[DayWithBadAQI], [Measures].[Mean AQI]} on columns,
+		nonemptycrossjoin(
+			[County Dimension].[State Name].[State Name].MEMBERS,
+			[County Dimension].[County Name].[County Name].MEMBERS
+		) ON ROWS
+FROM [Air Quality Data DDS]
+where {[AQI Category Dim].[Category SK].&[5], [AQI Category Dim].[Category SK].&[6]};
+
+--2.  Report the mean and the standard deviation of AQI value for each State during each quarter of years.
+WITH
+MEMBER [Measures].[StdDevAQI] AS
+	StDevP(
+		[Date Dimension].[Hierarchy].CurrentMember.Children,
+		[Measures].[Mean AQI]
+	)
+Select 
+	{[Measures].[Mean AQI], [Measures].[StdDevAQI]} on columns,
+	([County Dimension].[State Name].[State Name] *
+	[Date Dimension].[Hierarchy].[Year] *
+	[Date Dimension].[Quarter].[Quarter]) on rows
+FROM [Air Quality Data DDS];
+
+--1.  Report the min and max of AQI value for each State during each quarter of years.
+SELECT 
+    NONEMPTY(
+        [Date Dimension].[Hierarchy].[Year].MEMBERS 
+        * [Date Dimension].[Quarter].[Quarter].MEMBERS
+    ) ON COLUMNS,
+    NONEMPTY(
+        [County Dimension].[State Name].[State Name].MEMBERS
+        * {[Measures].[Minimum AQI], [Measures].[Maximum AQI]}
+    ) ON ROWS
+FROM [Air Quality Data DDS];
+
+
+			
+	
