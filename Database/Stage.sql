@@ -34,5 +34,5 @@ CREATE TABLE AirQualityData (
 );
 
 Select * from GeographyData;
-Select * from AirQualityData;
+Select * from AirQualityData where AQI >= 251;
 

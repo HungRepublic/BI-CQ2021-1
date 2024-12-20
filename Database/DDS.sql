@@ -134,4 +134,4 @@ EXEC PopulateDateDimension;
 
 Select * from DateDimension
 Select * from CountyDimension;
-Select * from AQIFactTable WHERE AQI = 500;
+Select * from AQIFactTable where CategorySK >= 5;

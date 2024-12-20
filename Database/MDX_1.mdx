@@ -36,7 +36,7 @@ WITH
 MEMBER [Measures].[DaysInCategory] as
 	COUNT(
 		FILTER(
-			[Date Dimension].[Date SK].[Date SK].MEMBERS,
+			[Date Dimension].[DATE].[DATE].MEMBERS,
 			NOT IsEmpty([Measures].[AQI])
 		)
 	)
@@ -55,27 +55,28 @@ SELECT
 			* [County Dimension].[County Name].[County Name].MEMBERS
     ) ON ROWS
 FROM [Air Quality Data DDS]
-WHERE ([Date Dimension].[Date SK])
+WHERE ([Date Dimension].[DATE].MEMBERS)
 
 --3. Report the number of days, and the mean AQI value where the air quality is rated as "very unhealthy" or worse for each State and County.
 WITH
 Member [Measures].[DayWithBadAQI] AS
-	COUNT(
-		FILTER(
-			[Date Dimension].[Date SK].[Date SK].Members,
-			([Measures].[AQI], [AQI Category Dim].[Category SK].&[5]) > 0 
-			OR
-			([Measures].[AQI], [AQI Category Dim].[Category SK].&[6]) > 0 
-		)
-	)
-	SELECT 
-		{[Measures].[DayWithBadAQI], [Measures].[Mean AQI]} on columns,
-		nonemptycrossjoin(
-			[County Dimension].[State Name].[State Name].MEMBERS,
-			[County Dimension].[County Name].[County Name].MEMBERS
-		) ON ROWS
+    COUNT(
+        FILTER(
+            [Date Dimension].[DATE].[DATE].Members,
+            ([Measures].[AQI], [AQI Category Dim].[Category SK].&[5]) > 0 
+            OR
+            ([Measures].[AQI], [AQI Category Dim].[Category SK].&[6]) > 0 
+        )
+    )
+    SELECT 
+        {[Measures].[DayWithBadAQI], [Measures].[Mean AQI]} on columns,
+        NONEMPTYCROSSJOIN(
+            [County Dimension].[State Name].[State Name].MEMBERS,
+            [County Dimension].[County Name].[County Name].MEMBERS
+        ) ON ROWS
 FROM [Air Quality Data DDS]
 where {[AQI Category Dim].[Category SK].&[5], [AQI Category Dim].[Category SK].&[6]};
+
 
 --2.  Report the mean and the standard deviation of AQI value for each State during each quarter of years.
 WITH
